@@ -1,1 +1,1 @@
-This is a project of Joke generator learning Async & Await. It is thanks to one of my greatest inspirations, <a href="http://https://www.twitter.com/DThompsonDev​" target="_blank" rel="noopener noreferrer">DThompsonDev</a>. All my gratitude to you Danny.
+This is a weather project as I keep on learning Async & Await. Special thanks to <a href="https://github.com/TylerPottsDev" target="_blank" rel="noopener noreferrer">Tyler POTT</a> who created and explains all the contents . All my gratitude to you Tyler for being such ans inspiration.
