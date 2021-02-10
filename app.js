@@ -24,6 +24,7 @@ function getResults(query) {
 
 function displayResults(weather) {
 
+  console.log(weather)
   // === === get | location === ===
 
   let city = document.querySelector('.location .city');
@@ -42,22 +43,15 @@ function displayResults(weather) {
   let weatherDescription = document.querySelector('.current .weather');
   weatherDescription.innerText = weather.weather[0].main;
 
-   // === === get | change the background imaged based on the temp === ===
+   // === === get | change the background imaged based on the weather description === ===
+  // if( weatherDescription.innerText == 'clouds' ){
+  //   document.body.style.backgroundImage = "url('/images/cloudy.jpg')";
+  // }else if(weather.weather[0].main == 'snow'){
+  //   document.body.style.backgroundImage = "url('/images/snow.jpg')"
+  // } else{
+  //   document.body.style.backgroundImage = "url('/images/sunny.jpg')"
+  // }
 
-  function changeTheBackground(temp) {
-    let body = document.querySelector('body');
-
-    if(temp < 16){
-      body.style.backgroundImage = "url('/images/snow.jpg')";
-      }
-      else {
-        body.style.backgroundImage = "url('/images/sunny.jpg')"
-
-      }
-
-  };
-
-  changeTheBackground();
 
    // === === get | temp range === ===
 
