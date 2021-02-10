@@ -44,13 +44,20 @@ function displayResults(weather) {
 
    // === === get | change the background imaged based on the temp === ===
 
-  // changeTheBackground(temp){
-  //   if(temp < 16){
+  function changeTheBackground(temp) {
+    let body = document.querySelector('body');
 
-  //   }
+    if(temp < 16){
+      body.style.backgroundImage = "url('/images/snow.jpg')";
+      }
+      else {
+        body.style.backgroundImage = "url('/images/sunny.jpg')"
 
-  // };
+      }
 
+  };
+
+  changeTheBackground();
 
    // === === get | temp range === ===
 
