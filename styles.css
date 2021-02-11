@@ -16,7 +16,7 @@ body{
 }
 
 .container{
-  width: 100%;
+  width:100%;
   min-width: 300px;
   min-height: 100vh;
   display: flex;
@@ -24,6 +24,7 @@ body{
   align-items: center;
   flex-direction: column;
   background-image:linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.6));
+  transition: all 0.5s ease-in-out;
 }
 
 
@@ -41,7 +42,7 @@ header input{
   font-weight: 300;
   padding: 10px 15px;
   border: none;
-  border-radius:16px 0 16px 0;
+  border-radius:20px;
   border-bottom: 3px solid #DF8E00;
   outline: none;
   background-color: rgba(255,255,255, 0.25);
@@ -51,7 +52,6 @@ header input{
 
 header input:focus{
   background-color: rgba(255,255,255, 0.7);
-  border-radius: 0 16px 0 16px;
   box-shadow: 0 2px 16px 2px rgba(0, 0, 0, 0.4);
 }
 

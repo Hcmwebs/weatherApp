@@ -24,14 +24,13 @@ function getResults(query) {
 
 function displayResults(weather) {
 
-  console.log(weather)
   // === === get | location === ===
 
   let city = document.querySelector('.location .city');
   city.innerText = `${weather.name}, ${weather.sys.country}`;
 
    // === === get | date === ===
-  let now =new Date();
+  let now = new Date();
   let date = document.querySelector('.location .date');
   date.innerText = dateGenerator(now);
 
@@ -43,20 +42,29 @@ function displayResults(weather) {
   let weatherDescription = document.querySelector('.current .weather');
   weatherDescription.innerText = weather.weather[0].main;
 
-   // === === get | change the background imaged based on the weather description === ===
-  // if( weatherDescription.innerText == 'clouds' ){
-  //   document.body.style.backgroundImage = "url('/images/cloudy.jpg')";
-  // }else if(weather.weather[0].main == 'snow'){
-  //   document.body.style.backgroundImage = "url('/images/snow.jpg')"
-  // } else{
-  //   document.body.style.backgroundImage = "url('/images/sunny.jpg')"
-  // }
-
-
    // === === get | temp range === ===
 
   let hiLow = document.querySelector('.hi-low');
-  hiLow.innerText =`${Math.round(weather.main.temp_min)}°C / ${Math.round(weather.main.temp_max)}°C `;
+  hiLow.innerText =`${Math.round(weather.main.temp_min - 10 )}°C / ${Math.round(weather.main.temp_max)}°C `;
+
+
+   // === === get | change the background === ===
+  let body = document.body;
+  if(weatherDescription.innerText == 'Clouds'){
+    body.style.backgroundImage ='url("/images/cloudy.jpg")'
+  } else if(weatherDescription.innerText == 'Sunny'){
+    body.style.backgroundImage ='url("/images/sunny.jpg")'
+  }
+  else if(weatherDescription.innerText == 'Snow' ){
+    body.style.backgroundImage ='url("/images/snow.jpg")'
+  }
+  else if(weatherDescription.innerText == 'Rains' ){
+    body.style.backgroundImage ='url("/images/rains.jpg")'
+  }
+  else {
+    body.style.backgroundImage = 'url("/images/clear.jpg")';
+  }
+
 
 }
 
